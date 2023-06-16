@@ -58,7 +58,7 @@ class Network:
         outputVector = self.softmax()
         for iOutputValue in range(len(outputVector)):
             cost += (outputVector[iOutputValue] - outputDict[symbol][iOutputValue])**2
-            cost = math.sqrt(cost)
+        cost = math.sqrt(cost)
         return cost
 
     def computeAverageCost(self):
